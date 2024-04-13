@@ -73,7 +73,7 @@ class g0thOBF:
         random.shuffle(init)
         init = ";".join(init)
         self.code = f'''
-# Obfuscated - https://github.com/g0T-h
+# Obfuscated - https://github.com/sh1nsetsu
 {init};__import__({self.encryptstring("builtins")}).exec(__import__({self.encryptstring("marshal")}).loads(__import__({self.encryptstring("base64")}).b64decode(__import__({self.encryptstring("codecs")}).decode({var1}, __import__({self.encryptstring("base64")}).b64decode("{base64.b64encode(b'rot13').decode()}").decode())+{var2}+{var3}[::-1]+{var4})))
 '''.strip().encode()
     
@@ -97,7 +97,7 @@ class g0thOBF:
         }
         encryptstring = self.encryptor(conf)
         
-        self.code = f'''# Obfuscated - https://github.com/g0T-h
+        self.code = f'''# Obfuscated - https://github.com/sh1nsetsu
 {var3} = eval({self.encryptstring("eval")});{var4} = {var3}({self.encryptstring("getattr")});{var8} = {var3}({self.encryptstring("__import__")});{var9} = {var3}({self.encryptstring("bytes")});{var5} = lambda {var7}: {var3}({encryptstring("compile")})({var7}, {encryptstring("<string>")}, {encryptstring("exec")});{var1} = {self.code}
 {var2} = {encryptstring('__import__("builtins").list', func= True)}({var1})
 try:
